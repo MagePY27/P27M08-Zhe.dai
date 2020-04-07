@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>DevOps</title>
+<head>
+<body>
+<p> hello Django</p>
+
+<!--{#接受视图中的⼀一般变量量值#}-->
+<p> {{ testclassname }} </p>
+
+<!--{# 接受列列表中的值(索引号的方式)#}-->
+<li>{{ books.0 }}</li>
+<li>{{ books.1 }}</li>
+<li>{{ books.2 }}</li>
+
+<!--{# 接受字典中的定义的值 #}-->
+<div color = blue>hello my name is {{ user.name }} </br>
+my age is {{ user.age }}
+</div>
+
+<!--{# for循环输出列列表嵌套字典数据 #}-->
+{% for user in userlist %}
+<li>{{ user.name }}-->{{ user.age }}</li>
+{% endfor %}
+
+<!--{# if标签使⽤用，判断user是否存在 #}-->
+{% if user %}
+    <p> name:{{ user.name }} </p>
+{%else%}
+    ⽤用户不不存在
+{% endif %}
+
+<!--{# for循环标签，渲染books列列表 #}-->
+{% for book in books %}
+    <li>{{ book }}</li>
+{% endfor %}
+
+
+</body>
+</html>
